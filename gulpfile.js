@@ -21,3 +21,7 @@ var Paths = {
       .pipe(sourcemaps.write(Paths.HERE))
       .pipe(gulp.dest(Paths.CSS));
   });
+
+  gulp.task('watch', function() {
+    gulp.watch(Paths.SCSS, gulp.series('compile-scss'));
+  });
