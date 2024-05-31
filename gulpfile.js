@@ -30,3 +30,5 @@ var Paths = {
     gulp.src('pages/dashboard.html')
       .pipe(open());
   });
+
+  gulp.task('open-app', gulp.parallel('open', 'watch'));
